@@ -22,6 +22,15 @@ ThemeData getDefaultTheme() {
       selectedItemColor: Colors.blueGrey[900]!,
     ),
     textTheme: TextTheme(
+      titleSmall: GoogleFonts.lato(
+        color: Colors.blueGrey[900],
+      ),
+      titleMedium: GoogleFonts.lato(
+        color: Colors.blueGrey[900],
+      ),
+      titleLarge: GoogleFonts.lato(
+        color: Colors.blueGrey[900],
+      ),
       bodyLarge: GoogleFonts.lato(
         color: Colors.blueGrey[900],
       ),

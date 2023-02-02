@@ -7,6 +7,7 @@ class QNumberField extends StatefulWidget {
   final String? hint;
   final String? Function(String?)? validator;
   final Function(String) onChanged;
+  final Function(String)? onSubmitted;
 
   final String? pattern;
   final String? locale;
@@ -18,6 +19,7 @@ class QNumberField extends StatefulWidget {
     this.validator,
     this.hint,
     required this.onChanged,
+    this.onSubmitted,
     this.pattern,
     this.locale = "en_US",
   }) : super(key: key);
@@ -74,17 +76,9 @@ class _QNumberFieldState extends State<QNumberField> {
         helperText: widget.hint,
       ),
       onChanged: (newValue) {
-
-        String str = 'Hello World 123';
-
-        String result = str.replaceAll(RegExp(r'\D'), '');
-        
-        
-      },
-      onEditingComplete: () {
         var newValue = controller.text;
         print("newValue: $newValue");
-        
+
         value = newValue.replaceAll(RegExp(r'[^0-9.]'), '');
 
         print("value: $value");
@@ -93,6 +87,21 @@ class _QNumberFieldState extends State<QNumberField> {
             TextSelection.collapsed(offset: controller.text.length);
 
         widget.onChanged(newValue.replaceAll(RegExp(r'\D'), ''));
+      },
+      onFieldSubmitted: (newValue) {
+        var newValue = controller.text;
+        print("newValue: $newValue");
+
+        value = newValue.replaceAll(RegExp(r'[^0-9.]'), '');
+
+        print("value: $value");
+        controller.text = formattedValue ?? "";
+        controller.selection =
+            TextSelection.collapsed(offset: controller.text.length);
+
+        if (widget.onSubmitted != null) {
+          widget.onSubmitted!(newValue.replaceAll(RegExp(r'\D'), ''));
+        }
       },
     );
   }
