@@ -2,6 +2,8 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
+bool isDarkMode = true;
+
 get mq => MediaQuery.of(globalContext);
 get mqs => MediaQuery.of(globalContext).size;
 

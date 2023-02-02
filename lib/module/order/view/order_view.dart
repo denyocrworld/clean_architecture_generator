@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/ex_main_navigation_controller.dart';
+import '../controller/order_controller.dart';
 
-class ExMainNavigationView extends StatefulWidget {
-  const ExMainNavigationView({Key? key}) : super(key: key);
+class OrderView extends StatefulWidget {
+  const OrderView({Key? key}) : super(key: key);
 
-  Widget build(context, ExMainNavigationController controller) {
+  Widget build(context, OrderController controller) {
     controller.view = this;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ExMainNavigation"),
+        title: const Text("Order"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -25,5 +25,5 @@ class ExMainNavigationView extends StatefulWidget {
   }
 
   @override
-  State<ExMainNavigationView> createState() => ExMainNavigationController();
+  State<OrderView> createState() => OrderController();
 }

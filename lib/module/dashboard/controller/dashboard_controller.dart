@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/ex_main_navigation_view.dart';
+import '../view/dashboard_view.dart';
 
-class ExMainNavigationController extends State<ExMainNavigationView> implements MvcController {
-  static late ExMainNavigationController instance;
-  late ExMainNavigationView view;
+class DashboardController extends State<DashboardView> implements MvcController {
+  static late DashboardController instance;
+  late DashboardView view;
 
   @override
   void initState() {

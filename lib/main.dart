@@ -5,7 +5,6 @@ import 'package:hyper_ui/debug.dart';
 void main() async {
   await initialize();
 
-  
   Get.mainTheme.value = getDarkTheme();
   runMainApp();
 }
@@ -27,13 +26,12 @@ class MainApp extends StatelessWidget {
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: value,
-          home: const ExMainNavigationView(),
-          
-          
-          
-          
-          
-          builder: debugView,
+          home: const MainNavigationView(),
+          builder: (context, child) => debugView(
+            context: context,
+            child: child,
+            visible: true,
+          ),
         );
       },
     );

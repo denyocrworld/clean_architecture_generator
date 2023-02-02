@@ -5,8 +5,16 @@ it means you have to rename it to something more unique.
 */
 export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
-export 'package:hyper_ui/module/__example/ex_main_navigation/controller/ex_main_navigation_controller.dart';
-export 'package:hyper_ui/module/__example/ex_main_navigation/view/ex_main_navigation_view.dart';
+export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
+export 'package:hyper_ui/module/dashboard/view/dashboard_view.dart';
+export 'package:hyper_ui/module/favorite/controller/favorite_controller.dart';
+export 'package:hyper_ui/module/favorite/view/favorite_view.dart';
+export 'package:hyper_ui/module/main_navigation/controller/main_navigation_controller.dart';
+export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
+export 'package:hyper_ui/module/order/controller/order_controller.dart';
+export 'package:hyper_ui/module/order/view/order_view.dart';
+export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
+export 'package:hyper_ui/module/profile/view/profile_view.dart';
 export 'package:hyper_ui/module/__example/imran/imran_dashboard/controller/imran_dashboard_controller.dart';
 export 'package:hyper_ui/module/__example/imran/imran_dashboard/view/imran_dashboard_view.dart';
 export 'package:hyper_ui/module/__example/imran/imran_product_detail/controller/imran_product_detail_controller.dart';
@@ -18,7 +26,6 @@ export 'package:hyper_ui/module/__example/shakuro/shakuro_product_detail/view/sh
 export 'package:hyper_ui/service/main_storage/main_storage.dart';
 export 'package:hyper_ui/setup.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
-export 'package:hyper_ui/shared/theme/theme_changer.dart';
 export 'package:hyper_ui/shared/theme/theme_config.dart';
 export 'package:hyper_ui/shared/theme/theme_dark.dart';
 export 'package:hyper_ui/shared/util/common/common.dart';

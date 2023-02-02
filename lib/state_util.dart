@@ -20,6 +20,7 @@ class Get {
   }
 
   static back() {
+    if (Navigator.canPop(globalContext) == false) return;
     Navigator.pop(globalContext);
   }
 

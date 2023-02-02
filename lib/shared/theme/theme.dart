@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hyper_ui/shared/theme/theme_config.dart';
 import 'package:flutter/material.dart';
 
@@ -8,12 +9,27 @@ ThemeData getDefaultTheme() {
     appBarTheme: AppBarTheme(
       backgroundColor: appbarBackgroundColor,
       elevation: 0.6,
-      titleTextStyle: googleFont.copyWith(
+      titleTextStyle: GoogleFonts.lato(
         color: Colors.blueGrey[700],
         fontWeight: FontWeight.bold,
       ),
       iconTheme: IconThemeData(
         color: Colors.blueGrey[700],
+      ),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      unselectedItemColor: Colors.grey,
+      selectedItemColor: Colors.blueGrey[900]!,
+    ),
+    textTheme: TextTheme(
+      bodyLarge: GoogleFonts.lato(
+        color: Colors.blueGrey[900],
+      ),
+      bodySmall: GoogleFonts.lato(
+        color: Colors.blueGrey[900],
+      ),
+      bodyMedium: GoogleFonts.lato(
+        color: Colors.blueGrey[900],
       ),
     ),
   );
