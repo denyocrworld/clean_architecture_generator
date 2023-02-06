@@ -52,7 +52,9 @@ class Get {
 
 extension ChangeNotifierExtension on State {
   update() {
-    setState(() {});
+    if (mounted) {
+      setState(() {});
+    }
   }
 }
 

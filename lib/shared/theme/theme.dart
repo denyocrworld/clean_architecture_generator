@@ -21,6 +21,10 @@ ThemeData getDefaultTheme() {
       unselectedItemColor: Colors.grey,
       selectedItemColor: Colors.blueGrey[900]!,
     ),
+    tabBarTheme: TabBarTheme(
+      unselectedLabelColor: Colors.grey,
+      labelColor: Colors.blueGrey[900]!,
+    ),
     textTheme: TextTheme(
       titleSmall: GoogleFonts.lato(
         color: Colors.blueGrey[900],
