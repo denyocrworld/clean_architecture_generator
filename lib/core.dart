@@ -15,8 +15,6 @@ export 'package:hyper_ui/module/order/controller/order_controller.dart';
 export 'package:hyper_ui/module/order/view/order_view.dart';
 export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/profile/view/profile_view.dart';
-export 'package:hyper_ui/module/__example/ex_main_navigation/controller/ex_main_navigation_controller.dart';
-export 'package:hyper_ui/module/__example/ex_main_navigation/view/ex_main_navigation_view.dart';
 export 'package:hyper_ui/module/__example/imran/imran_dashboard/controller/imran_dashboard_controller.dart';
 export 'package:hyper_ui/module/__example/imran/imran_dashboard/view/imran_dashboard_view.dart';
 export 'package:hyper_ui/module/__example/imran/imran_product_detail/controller/imran_product_detail_controller.dart';

@@ -26,7 +26,6 @@ class ImranDashboardController extends State<ImranDashboardView>
     setState(() {});
   }
 
-
   List<Map<String, dynamic>> categories = [
     {
       'category_name': 'Sofa',
@@ -79,7 +78,6 @@ class ImranDashboardController extends State<ImranDashboardView>
           'A piece of furniture with drawers for keeping clothes, typically placed in a bedroom.'
     },
   ];
-
 
   List<Map> products = [
     {

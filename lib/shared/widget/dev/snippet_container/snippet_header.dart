@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 
 class SnippetHeader extends StatelessWidget {

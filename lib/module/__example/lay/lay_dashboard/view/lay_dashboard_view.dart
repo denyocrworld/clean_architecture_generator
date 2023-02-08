@@ -1,4 +1,3 @@
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
@@ -96,7 +95,6 @@ class LayDashboardView extends StatefulWidget {
                 const SizedBox(
                   height: 20.0,
                 ),
-                
                 Builder(builder: (context) {
                   List images = [
                     "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",

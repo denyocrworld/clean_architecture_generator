@@ -95,9 +95,7 @@ class FormExampleViewState extends State<FormExampleView> {
               child: ElevatedButton.icon(
                 icon: const Icon(Icons.login),
                 label: const Text("Save"),
-                style: ElevatedButton.styleFrom(
-                    
-                    ),
+                style: ElevatedButton.styleFrom(),
                 onPressed: () {
                   bool isValid = formKey.currentState!.validate();
                   if (!isValid) return;

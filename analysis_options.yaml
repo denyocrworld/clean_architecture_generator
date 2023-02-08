@@ -13,3 +13,4 @@ analyzer:
     invalid_use_of_protected_member: ignore
     unused_local_variable: ignore
     avoid_print: ignore
+    unnecessary_type_check: ignore
