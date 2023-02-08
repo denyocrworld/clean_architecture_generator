@@ -1,3 +1,5 @@
+[![Flutter](https://github.com/denyocrworld/hyper_ui/actions/workflows/flutter.yml/badge.svg)](https://github.com/denyocrworld/hyper_ui/actions/workflows/flutter.yml)
+
 # HyperUI by DenyOcr
 
 Info Kelas:<br>
