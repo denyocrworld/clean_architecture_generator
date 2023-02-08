@@ -1,4 +1,4 @@
-[![Flutter](https://github.com/denyocrworld/hyper_ui/actions/workflows/flutter.yml/badge.svg)](https://github.com/denyocrworld/hyper_ui/actions/workflows/flutter.yml)
+[![Flutter](https://github.com/denyocrworld/capekngoding/actions/workflows/flutter.yml/badge.svg)](https://github.com/denyocrworld/capekngoding/actions/workflows/flutter.yml)
 
 # HyperUI by DenyOcr
 
