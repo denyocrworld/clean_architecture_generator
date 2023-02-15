@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/core.dart';
 
 class QTextField extends StatefulWidget {
+  final String? id;
   final String label;
   final String? value;
   final String? hint;
@@ -10,15 +12,18 @@ class QTextField extends StatefulWidget {
   final IconData? prefixIcon;
   final IconData? suffixIcon;
   final Function(String) onChanged;
+  final Function(String)? onSubmitted;
 
   const QTextField({
     Key? key,
     required this.label,
+    this.id,
     this.value,
     this.validator,
     this.hint,
     this.maxLength,
     required this.onChanged,
+    this.onSubmitted,
     this.obscure = false,
     this.prefixIcon,
     this.suffixIcon,
@@ -28,16 +33,42 @@ class QTextField extends StatefulWidget {
   State<QTextField> createState() => _QTextFieldState();
 }
 
-class _QTextFieldState extends State<QTextField> {
+class _QTextFieldState extends State<QTextField> implements InputControlState {
+  TextEditingController textEditingController = TextEditingController();
+
   @override
   void initState() {
+    textEditingController.text = widget.value ?? "";
+    Input.inputController[widget.id ?? const Uuid().v4()] = this;
     super.initState();
   }
 
   @override
+  getValue() {
+    return textEditingController.text;
+  }
+
+  @override
+  setValue(value) {
+    textEditingController.text = value;
+  }
+
+  @override
+  resetValue() {
+    textEditingController.text = "";
+  }
+
+  focus() {
+    focusNode.requestFocus();
+  }
+
+  FocusNode focusNode = FocusNode();
+
+  @override
   Widget build(BuildContext context) {
     return TextFormField(
-      initialValue: widget.value,
+      controller: textEditingController,
+      focusNode: focusNode,
       validator: widget.validator,
       maxLength: widget.maxLength,
       obscureText: widget.obscure,
@@ -58,6 +89,9 @@ class _QTextFieldState extends State<QTextField> {
       ),
       onChanged: (value) {
         widget.onChanged(value);
+      },
+      onFieldSubmitted: (value) {
+        if (widget.onSubmitted != null) widget.onSubmitted!(value);
       },
     );
   }

@@ -42,6 +42,7 @@ dependencies:
   mobile_scanner: ^2.1.0
   qr_flutter: ^4.0.0
   path_provider: ^2.0.11
+  flutter_animate: ^3.1.0
   
 dev_dependencies:
   flutter_test:

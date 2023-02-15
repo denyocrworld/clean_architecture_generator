@@ -3,11 +3,15 @@ class Input {
   static Map<String, InputControlState> inputController = {};
 
   static set(key, value) {
-    values[key] = value;
+    inputController[key]?.setValue(value);
   }
 
   static get(key) {
-    return values[key];
+    return inputController[key]?.getValue();
+  }
+
+  static focus(key) {
+    return inputController[key]?.focus();
   }
 
   static clear(key) {
@@ -22,6 +26,8 @@ class Input {
 }
 
 class InputControlState {
+  getValue() {}
   setValue(value) {}
   resetValue() {}
+  focus() {}
 }

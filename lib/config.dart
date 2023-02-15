@@ -1,3 +1,4 @@
 class AppConfig {
-  static String baseUrl = "http://localhost:8080";
+  static String baseUrl = "https://capekngoding.com";
+  static String token = "";
 }
