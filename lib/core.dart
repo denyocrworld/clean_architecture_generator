@@ -5,20 +5,6 @@ it means you have to rename it to something more unique.
 */
 export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
-export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
-export 'package:hyper_ui/module/dashboard/view/dashboard_view.dart';
-export 'package:hyper_ui/module/favorite/controller/favorite_controller.dart';
-export 'package:hyper_ui/module/favorite/view/favorite_view.dart';
-export 'package:hyper_ui/module/main_navigation/controller/main_navigation_controller.dart';
-export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
-export 'package:hyper_ui/module/order/controller/order_controller.dart';
-export 'package:hyper_ui/module/order/view/order_view.dart';
-export 'package:hyper_ui/module/profile/controller/profile_controller.dart';
-export 'package:hyper_ui/module/profile/view/profile_view.dart';
-export 'package:hyper_ui/service/auth_service/auth_service.dart';
-export 'package:hyper_ui/service/dummy_service/dummy_service.dart';
-export 'package:hyper_ui/service/main_storage/main_storage.dart';
-export 'package:hyper_ui/service/product_service/product_service.dart';
 export 'package:hyper_ui/setup.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
 export 'package:hyper_ui/shared/theme/theme_config.dart';
