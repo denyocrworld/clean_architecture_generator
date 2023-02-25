@@ -12,6 +12,7 @@ class QLocationPicker extends StatefulWidget {
   final double? latitude;
   final double? longitude;
   final String? Function(double? latitude, double? longitude)? validator;
+  final Function(double latitude, double longitude) onChanged;
   final bool enableEdit;
 
   const QLocationPicker({
@@ -22,6 +23,7 @@ class QLocationPicker extends StatefulWidget {
     this.latitude,
     this.longitude,
     this.validator,
+    required this.onChanged,
     this.enableEdit = true,
   }) : super(key: key);
 
@@ -206,6 +208,7 @@ class _QLocationPickerState extends State<QLocationPicker>
                                     latitude: latitude,
                                     longitude: longitude,
                                     enableEdit: widget.enableEdit,
+                                    onChanged: widget.onChanged,
                                   ),
                                 ),
                               );
@@ -234,6 +237,7 @@ class _QLocationPickerState extends State<QLocationPicker>
                                       latitude: latitude,
                                       longitude: longitude,
                                       enableEdit: widget.enableEdit,
+                                      onChanged: widget.onChanged,
                                     ),
                                   ),
                                 );

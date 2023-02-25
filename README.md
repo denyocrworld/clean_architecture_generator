@@ -2,6 +2,15 @@
 
 # HyperUI by DenyOcr
 
+Documentation (Web)
+https://capekngoding.com/docs
+
+Documentation (Android)
+https://drive.google.com/file/d/13Rpm1mDWIXdeU0ZAcAh1gmO7Unea0pmE/view?usp=sharing
+
+Documentation (Windows Desktop)
+https://drive.google.com/open?id=11fbmFN-66SWyCB0UVO3pQ3W2Wts1MUQM&authuser=denyocr.world%40gmail.com&usp=drive_fs
+
 Info Kelas:<br>
 https://www.youtube.com/watch?v=xfTsgNcoNUI<br>
 

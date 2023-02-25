@@ -3,6 +3,14 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:hyper_ui/bad_examples/bad_examples/login/login_controller.dart';
+export 'package:hyper_ui/bad_examples/bad_examples/login/login_form.dart';
+export 'package:hyper_ui/bad_examples/bad_examples/login/login_logo.dart';
+export 'package:hyper_ui/bad_examples/bad_examples/login/login_view.dart';
+export 'package:hyper_ui/bad_examples/good_examples/login2/login/login_view.dart';
+export 'package:hyper_ui/bad_examples/good_examples/login2/view/login_controller.dart';
+export 'package:hyper_ui/bad_examples/good_examples/login2/widget/login_form.dart';
+export 'package:hyper_ui/bad_examples/good_examples/login2/widget/login_logo.dart';
 export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
 export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
@@ -69,6 +77,7 @@ export 'package:hyper_ui/shared/widget/form/location_picker/map_viewer.dart';
 export 'package:hyper_ui/shared/widget/form/memo_field/memo_field.dart';
 export 'package:hyper_ui/shared/widget/form/number_field/numberfield.dart';
 export 'package:hyper_ui/shared/widget/form/radio/radio.dart';
+export 'package:hyper_ui/shared/widget/form/rating/rating_field.dart';
 export 'package:hyper_ui/shared/widget/form/switch/switch.dart';
 export 'package:hyper_ui/shared/widget/form/textfield/text_field.dart';
 export 'package:hyper_ui/shared/widget/form/time_picker/timepicker.dart';
