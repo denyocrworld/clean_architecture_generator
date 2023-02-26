@@ -2,7 +2,23 @@
 
 # HyperUI by DenyOcr
 
-Documentation (Web)
+Tutorial membuat Project Baru dengan Hyper UI:
+```
+mkdir demo
+cd demo
+git clone https://github.com/denyocrworld/hyper_ui .
+cd demo
+flutter clean
+flutter pub get --verbose
+code .
+```
+
+atau jalankan satu perintah ini:
+```
+mkdir demo && cd demo && git clone https://github.com/denyocrworld/hyper_ui . && cd demo && flutter clean && flutter pub get --verbose && code .
+```
+
+Documentation (Web)<br>
 https://capekngoding.com/docs
 
 Documentation (Android)

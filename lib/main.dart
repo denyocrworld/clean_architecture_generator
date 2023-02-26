@@ -2,6 +2,50 @@ import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/debug.dart';
 
+product() {}
+
+getUser() async {
+  var response = await Dio().get(
+    "https://reqres.in/api/users",
+    options: Options(
+      headers: {
+        "Content-Type": "application/json",
+      },
+    ),
+  );
+  Map obj = response.data;
+}
+
+addProduct() async {
+  var user = await getUser();
+
+  var response = await Dio().post(
+    "https://reqres.in/api/users",
+    options: Options(
+      headers: {
+        "Content-Type": "application/json",
+      },
+    ),
+    data: {
+      "name": "morpheus",
+      "job": "programmer",
+    },
+  );
+  Map obj = response.data;
+}
+
+deleteProduct() {}
+updateProduct() {}
+getProduct() {}
+
+dltProduct() {}
+updtPrdct() {}
+
+deleteProductOfCustomerFromDatabase() {}
+
+addProductHttpRequest() {}
+addProductLocalStorage() {}
+
 void main() async {
   await initialize();
 
@@ -26,7 +70,7 @@ class MainApp extends StatelessWidget {
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: value,
-          home: const MainNavigationView(),
+          home: const TutorialDemoView(),
           builder: (context, child) => debugView(
             context: context,
             child: child,
