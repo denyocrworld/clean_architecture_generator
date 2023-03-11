@@ -41,6 +41,7 @@ export 'package:hyper_ui/shared/widget/card/card.dart';
 export 'package:hyper_ui/shared/widget/dev/snippet_container/snippet_container.dart';
 export 'package:hyper_ui/shared/widget/dev/snippet_container/snippet_header.dart';
 export 'package:hyper_ui/shared/widget/form/autocomplete/autocomplete.dart';
+export 'package:hyper_ui/shared/widget/form/category_picker/category_picker.dart';
 export 'package:hyper_ui/shared/widget/form/check_field/check_field.dart';
 export 'package:hyper_ui/shared/widget/form/date_picker/datepicker.dart';
 export 'package:hyper_ui/shared/widget/form/dropdown/dropdown.dart';
