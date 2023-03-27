@@ -55,6 +55,9 @@ Widget debugView({
                     size: 12.0,
                   ),
                 ),
+                const SizedBox(
+                  height: 12.0,
+                ),
               ],
             ),
           ),

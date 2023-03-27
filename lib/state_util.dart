@@ -6,8 +6,6 @@ BuildContext get globalContext {
 
 class Get {
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-  static GlobalKey<NavigatorState> shellNavigatorKey =
-      GlobalKey<NavigatorState>();
 
   static get currentContext {
     return navigatorKey.currentState?.context;

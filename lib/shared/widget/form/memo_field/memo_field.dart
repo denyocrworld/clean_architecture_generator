@@ -21,15 +21,44 @@ class QMemoField extends StatefulWidget {
 }
 
 class _QMemoFieldState extends State<QMemoField> {
+  FocusNode focusNode = FocusNode();
+  GlobalKey key = GlobalKey();
+
   @override
   void initState() {
+    focusNode.addListener(() {
+      print("focusNodeListener");
+      if (focusNode.hasFocus) {
+        Future.delayed(const Duration(milliseconds: 300), () {
+          WidgetsBinding.instance
+              .addPostFrameCallback((_) => Scrollable.ensureVisible(
+                    key.currentContext!,
+                    alignmentPolicy:
+                        ScrollPositionAlignmentPolicy.keepVisibleAtEnd,
+                  ));
+        });
+      }
+    });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    print("rebuild");
+    if (focusNode.hasFocus) {
+      Future.delayed(const Duration(milliseconds: 300), () {
+        WidgetsBinding.instance
+            .addPostFrameCallback((_) => Scrollable.ensureVisible(
+                  key.currentContext!,
+                  alignmentPolicy:
+                      ScrollPositionAlignmentPolicy.keepVisibleAtEnd,
+                ));
+      });
+    }
     return TextFormField(
+      key: key,
       initialValue: widget.value,
+      focusNode: focusNode,
       validator: widget.validator,
       maxLength: 200,
       maxLines: 6,

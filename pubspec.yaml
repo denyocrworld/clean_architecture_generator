@@ -10,10 +10,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   freezed_annotation: ^2.1.0
   json_annotation: ^4.7.0
-  firebase_core: ^2.4.1
-  firebase_auth: ^4.2.5
-  cloud_firestore: ^4.3.1
-  google_sign_in: ^5.4.3
   intl: ^0.17.0
   google_fonts: ^3.0.1
   material_design_icons_flutter: ^5.0.6996
@@ -38,12 +34,9 @@ dependencies:
   faker_dart: ^0.1.11
   syncfusion_flutter_charts: ^20.3.58
   bitsdojo_window: ^0.1.5
-  mobile_scanner: ^3.0.0
   qr_flutter: ^4.0.0
   path_provider: ^2.0.11
   flutter_animate: ^3.1.0
-  firebase_messaging: ^14.2.5
-  flutter_local_notifications: ^8.2.0
   dio: ^5.0.1
 dev_dependencies:
   flutter_test:
