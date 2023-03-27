@@ -45,15 +45,7 @@ class DashboardView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () => Get.to(const OrderView()),
-                child: const Text("Save"),
-              ),
-            ],
+            children: const [],
           ),
         ),
       ),

@@ -3,6 +3,13 @@ import 'package:flutter/material.dart';
 class QCategoryPicker extends StatefulWidget {
   final List<Map<String, dynamic>> items;
   final dynamic value;
+
+  final Function(
+    Map<String, dynamic> item,
+    bool selected,
+    Function action,
+  )? itemBuilder;
+
   final Function(
     int index,
     String label,
@@ -13,6 +20,7 @@ class QCategoryPicker extends StatefulWidget {
     Key? key,
     required this.items,
     required this.onChanged,
+    this.itemBuilder,
     this.value,
   }) : super(key: key);
 
@@ -22,6 +30,7 @@ class QCategoryPicker extends StatefulWidget {
 
 class _QCategoryPickerState extends State<QCategoryPicker> {
   int selectedIndex = -1;
+
   updateIndex(newIndex) {
     selectedIndex = newIndex;
     setState(() {});
@@ -45,6 +54,13 @@ class _QCategoryPickerState extends State<QCategoryPicker> {
           children: List.generate(widget.items.length, (index) {
             bool selected = selectedIndex == index;
             var item = widget.items[index];
+
+            if (widget.itemBuilder != null) {
+              return widget.itemBuilder!(item, selected, () {
+                updateIndex(index);
+              });
+            }
+
             return InkWell(
               onTap: () => updateIndex(index),
               child: Card(
