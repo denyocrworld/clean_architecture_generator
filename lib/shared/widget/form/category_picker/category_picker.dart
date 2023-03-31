@@ -46,6 +46,7 @@ class _QCategoryPickerState extends State<QCategoryPicker> {
     return SingleChildScrollView(
       controller: ScrollController(),
       scrollDirection: Axis.horizontal,
+      clipBehavior: Clip.none,
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
         child: Row(

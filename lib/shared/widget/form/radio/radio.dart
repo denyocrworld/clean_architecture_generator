@@ -6,6 +6,7 @@ class QRadioField extends StatefulWidget {
   final List<Map<String, dynamic>> items;
   final String? Function(List<Map<String, dynamic>> item)? validator;
   final Function(dynamic value, String? label) onChanged;
+  final String? value;
 
   const QRadioField({
     Key? key,
@@ -13,6 +14,7 @@ class QRadioField extends StatefulWidget {
     required this.items,
     this.validator,
     this.hint,
+    this.value,
     required this.onChanged,
   }) : super(key: key);
 
@@ -28,6 +30,9 @@ class _QRadioFieldState extends State<QRadioField> {
     super.initState();
     for (var item in widget.items) {
       items.add(Map.from(item));
+      if (items.last["value"] == widget.value) {
+        items.last["checked"] = true;
+      }
     }
   }
 

@@ -4,16 +4,20 @@ import 'package:flutter/material.dart';
 class QAutoComplete extends StatefulWidget {
   final String label;
   final String? hint;
+  final dynamic value;
   final List<Map<String, dynamic>> items;
   final String? Function(String? item)? validator;
   final Function(dynamic value, String? label) onChanged;
+  final Function()? onFuture;
 
   const QAutoComplete({
     Key? key,
     required this.label,
-    required this.items,
+    this.items = const [],
+    this.onFuture,
     this.validator,
     this.hint,
+    this.value,
     required this.onChanged,
   }) : super(key: key);
 
@@ -27,13 +31,27 @@ class _QAutoCompleteState extends State<QAutoComplete> {
   @override
   void initState() {
     super.initState();
-    for (var item in widget.items) {
-      items.add(Map.from(item));
+
+    if (widget.onFuture == null) {
+      for (var item in widget.items) {
+        items.add(Map.from(item));
+      }
+    } else {
+      loadData();
     }
+  }
+
+  loadData() async {
+    List<Map<String, dynamic>> serviceItems = await widget.onFuture!();
+    for (var item in serviceItems) {
+      items.add(item);
+    }
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
+    if (items.isEmpty) return Container();
     return LayoutBuilder(builder: (context, constraints) {
       return FormField(
           initialValue: false,
@@ -42,6 +60,17 @@ class _QAutoCompleteState extends State<QAutoComplete> {
             return Autocomplete<Map>(
               fieldViewBuilder: (context, textEditingController, focusNode,
                   onFieldSubmitted) {
+                var value = items.first["label"];
+                if (widget.value != null) {
+                  var searchItems =
+                      items.where((i) => i["value"] == widget.value).toList();
+                  if (searchItems.isNotEmpty) {
+                    value = searchItems.first["label"];
+                  }
+                }
+
+                textEditingController.text = value;
+
                 return TextFormField(
                   controller: textEditingController,
                   focusNode: focusNode,
@@ -55,9 +84,6 @@ class _QAutoCompleteState extends State<QAutoComplete> {
                   ),
                 );
               },
-              initialValue: TextEditingValue(
-                text: items.first["label"],
-              ),
               onSelected: (Map map) {
                 String? label = map["label"];
                 dynamic value = map["value"];
@@ -149,7 +175,9 @@ class _QAutoCompleteState extends State<QAutoComplete> {
                                               ),
                                             ),
                                       title: Text("${option["label"]}"),
-                                      subtitle: Text("${option["info"]}"),
+                                      subtitle: option["info"] == null
+                                          ? null
+                                          : Text("${option["info"]}"),
                                     ),
                                   ),
                                 );
