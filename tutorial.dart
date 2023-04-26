@@ -1,0 +1,6 @@
+/*
+/presentation
+  /bloc
+  /pages
+  /widgets
+*/
