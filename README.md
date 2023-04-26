@@ -20,9 +20,20 @@ dart .\generator.dart all product
 ----
 
 ### Kelas Online /w DenyOcr Gelombang 4
-Buka capekngoding.com
-- 16x Online Meet
-- *8x Meet Dart
-- *8x Meet Flutter
+Link Registrasi:<br>
+https://capekngoding.com
+
+Melalui jagoflutter:<br/>
+https://jagoflutter.com/courses/denyocr/
+
+*Gunakan kode voucher:*
+*THR2023* untuk mendapatkan diskon!
+Rp299.000,- menjadi Rp185.000,-
+
+Benefit:
+- 16x Online Meet in Total
+- 8x Meet Dart
+- 8x Meet Flutter
+- Boleh mengulang di gelombang berikutnya FREE
 - Video Tutorial durasi 30+ Jam lebih
-- Kelas Online yang bisa mengulang terus menerus
+- Kelas dengan kontrak Jangka Panjang!
