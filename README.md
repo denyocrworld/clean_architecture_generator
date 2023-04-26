@@ -1,10 +1,10 @@
-### Link Materi Clean Architecture + Cara Bikin Generator-nya:
+#### Link Materi Clean Architecture + Cara Bikin Generator-nya:
 https://www.youtube.com/watch?v=5_mdlhzhniY
 
-### Repository:
+#### Repository:
 https://github.com/denyocrworld/clean_architecture_generator
 
-### How to Use Clean Architecture Generator:
+#### How to Use Clean Architecture Generator:
 <i>Copy file generator.dart ke projectmu</i>
 <i>Silahkan modifikasi
 
