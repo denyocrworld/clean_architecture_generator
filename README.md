@@ -24,3 +24,5 @@ Buka capekngoding.com
 - 16x Online Meet
 - *8x Meet Dart
 - *8x Meet Flutter
+- Video Tutorial durasi 30+ Jam lebih
+- Kelas Online yang bisa mengulang terus menerus
