@@ -42,6 +42,10 @@ import 'dart:io';
 void main(List args) async {
   var command = args[0];
   var value = args[1];
+  String method = args[2];
+  var method2 = method.replaceAll(RegExp("\\["), "");
+  method2 = method2.replaceAll(RegExp("\\]"), "");
+  var method3 = method2.split(",");
 
   DefaultDirectoryGenerator.generate();
 
@@ -54,7 +58,7 @@ void main(List args) async {
       break;
     case "all":
       FeatureGenerator.generate(value);
-      RDUGenerator.generate(value);
+      RDUGenerator.generate(value, method: method3);
       break;
   }
 }
@@ -98,7 +102,7 @@ class FeatureGenerator {
 }
 
 class RDUGenerator {
-  static generate(String value) async {
+  static generate(String value, {List<String>? method}) async {
     String moduleName = value.split("/")[0];
 
     var datasourceFile = File(
@@ -116,7 +120,8 @@ class RDUGenerator {
     responseModelFile.createSync(recursive: true);
 
     datasourceFile.writeAsStringSync(await DataSourceGenerator.generate(value));
-    repositoryFile.writeAsStringSync(await RepositoryGenerator.generate(value));
+    repositoryFile.writeAsStringSync(
+        await RepositoryGenerator.generate(value, method: method));
     usecaseFile.writeAsStringSync(await UsecaseGenerator.generate(value));
     responseModelFile
         .writeAsStringSync(await ResponseModelGenerator.generate(value));
@@ -209,8 +214,36 @@ class LoginDataSource {
 }
 
 class RepositoryGenerator {
-  static Future<String> generate(String value) async {
+  static Future<String> generate(String value, {List<String>? method}) async {
     String moduleName = value.split("/")[0];
+    String methodName = "";
+    if (method != null) {
+      for (String i in method) {
+        List<String> splitMethod = i.split(" ");
+        dynamic zeroValue;
+        switch (splitMethod[0]) {
+          case "String":
+            zeroValue = "''";
+            break;
+          case "int":
+            zeroValue = 0;
+            break;
+          default:
+            zeroValue = null;
+        }
+        methodName +=
+            """\n\tFuture<${splitMethod[0]}> ${splitMethod[1]}() async { 
+    return $zeroValue; 
+  }\n""";
+      }
+      return """
+class LoginRepository {
+  $methodName
+}
+"""
+          .replaceAll("Login", moduleName.toClassName())
+          .trim();
+    }
     return """
 class LoginRepository {
 
